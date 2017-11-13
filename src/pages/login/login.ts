@@ -42,13 +42,10 @@ export class LoginPage {
     this.authService.signup(form.value.email, form.value.password)
       .subscribe(
         response => {
-          // this.notificationsService.add(new Notification('success', 'User successfully registered!'));
-          // this.router.navigate(['/signin']);
           console.log('Success');
           this.onHomePage();
         },
         error => {
-          // this.alertService.error(error);
           console.log('Error');
         }
       );
@@ -58,14 +55,4 @@ export class LoginPage {
     console.log('test login');
     this.authService.signinGoogle();
   }
-
-  // loginWithFB() {
-  // loginWithFB() {
-  //   this.facebook.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
-  //     this.facebook.api('me?fields=id,email,first_name', []).then(profile => {
-  //       this.userData = {email: profile['email'], first_name: profile['first_name'], username: profile['name']};
-  //     })
-  //   });
-  // }
-
 }
