@@ -38,10 +38,23 @@ export class AuthService {
           localStorage.setItem("token", tokenData.token);
       })
 
-      .catch(error => {
-          console.log(error.message);
+      .subscribe(
+        response => {
+            console.log('Success');
+            console.log(response);
+        },
+        error => {
+            console.log('Error');
+            console.log(error.message);
       });
   }
+
+  signinGoogle() {
+    console.log('Google auth test');
+    let htmlAlert;
+    return this.http.get(this.API + '/api/google/authorize')
+  }
+
 
   logout() {
     localStorage.removeItem("token");
