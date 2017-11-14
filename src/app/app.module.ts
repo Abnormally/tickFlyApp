@@ -7,12 +7,14 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LoginPage } from "../pages/login/login";
+import { LoginPage, ModalContentPage } from "../pages/login/login";
 import { RegisterPage } from "../pages/register/register";
 import { PostPage } from "../pages/post/post";
 import { HttpModule } from "@angular/http";
 import { HttpService } from "../services/http.service";
 import { FormsModule } from "@angular/forms";
+import { UserPrivatePage } from "../pages/user-private/user-private";
+import { UserPublicPage } from "../pages/user-public/user-public";
 import { InAppBrowser } from "@ionic-native/in-app-browser";
 
 @NgModule({
@@ -22,7 +24,10 @@ import { InAppBrowser } from "@ionic-native/in-app-browser";
     ListPage,
     LoginPage,
     RegisterPage,
-    PostPage
+    PostPage,
+    ModalContentPage,
+    UserPrivatePage,
+    UserPublicPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,10 @@ import { InAppBrowser } from "@ionic-native/in-app-browser";
     ListPage,
     LoginPage,
     RegisterPage,
-    PostPage
+    PostPage,
+    ModalContentPage,
+    UserPrivatePage,
+    UserPublicPage
   ],
   providers: [
     StatusBar,
